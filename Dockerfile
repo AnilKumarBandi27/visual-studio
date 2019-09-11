@@ -1,10 +1,8 @@
 FROM debian:buster-slim
 
 ENV LANG=en_US.UTF-8 \
-    # adding a sane default is needed since we're not erroring out via exec.
      CODER_PASSWORD="coder"
 
-#Change this via --arg in Docker CLI
 ARG CODER_VERSION=1.1156-vsc1.33.1
 
 COPY exec /opt
